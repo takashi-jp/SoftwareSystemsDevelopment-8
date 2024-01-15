@@ -1,5 +1,10 @@
 function App() {
     const { Container, Row, Col } = ReactBootstrap;
+
+    React.useEffect(() => {
+        document.title = "ToDo App by Takashi Nakano";
+    }, []);
+
     return (
         <Container>
             <Row>
