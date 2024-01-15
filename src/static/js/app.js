@@ -7,6 +7,7 @@ function App() {
 
     return (
         <Container>
+            <h1>ToDo App by Takashi Nakano</h1>
             <Row>
                 <Col md={{ offset: 3, span: 6 }}>
                     <TodoListCard />
@@ -121,7 +122,7 @@ function AddItemForm({ onNewItem }) {
 
 function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
     const { Container, Row, Col, Button } = ReactBootstrap;
-    
+
     const toggleCompletion = () => {
         fetch(`/items/${item.id}`, {
             method: 'PUT',
