@@ -18,10 +18,6 @@ function App() {
 
 function TodoListCard() {
     const [items, setItems] = React.useState(null);
-    
-    React.useEffect(() => {
-        document.title = "ToDo App by Takashi Nakano";
-    }, []);
 
     React.useEffect(() => {
         fetch('/items')
@@ -125,6 +121,10 @@ function AddItemForm({ onNewItem }) {
 
 function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
     const { Container, Row, Col, Button } = ReactBootstrap;
+
+    React.useEffect(() => {
+        document.title = "ToDo App by Takashi Nakano";
+    }, []);
 
     const toggleCompletion = () => {
         fetch(`/items/${item.id}`, {
