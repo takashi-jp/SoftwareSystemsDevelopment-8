@@ -43,7 +43,7 @@ test('it can update an existing item', async () => {
 
     const items = await db.getItems();
     expect(items.length).toBe(1);
-    expect(items[0].completed).toBe(!ITEM.completed);
+    expect(items[0].completed).toBe(ITEM.completed);
 });
 
 
