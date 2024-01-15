@@ -18,6 +18,10 @@ function App() {
 
 function TodoListCard() {
     const [items, setItems] = React.useState(null);
+    
+    React.useEffect(() => {
+        document.title = "ToDo App by Takashi Nakano";
+    }, []);
 
     React.useEffect(() => {
         fetch('/items')
